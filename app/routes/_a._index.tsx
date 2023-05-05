@@ -18,8 +18,7 @@ export default function Index() {
     >
       <SearchBar />
       <h1>Welcome to Remix Antd Mobile</h1>
-      <ul
-      >
+      <ul>
         <li>
           <a
             target="_blank"

@@ -1,9 +1,11 @@
 import { PageIndicator } from 'antd-mobile'
+import AppNav from '~/components/AppNav'
 import { DemoBlock } from '~/components/demos'
 
 export default () => {
   return (
     <>
+      <AppNav title="组件 - 分页符" />  
       <DemoBlock title='基础用法'>
         <PageIndicator total={4} current={0} />
       </DemoBlock>

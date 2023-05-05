@@ -1,4 +1,5 @@
 import { Steps } from 'antd-mobile'
+import AppNav from '~/components/AppNav'
 import { DemoBlock } from '~/components/demos'
 
 const { Step } = Steps
@@ -6,6 +7,7 @@ const { Step } = Steps
 export default () => {
   return (
     <>
+      <AppNav title="组件 - 步骤条" />
       <DemoBlock title='横向步骤条'>
         <Steps current={1}>
           <Step title='标题1' description='描述' />

@@ -1,4 +1,5 @@
 import { Selector, Space } from 'antd-mobile'
+import AppNav from '~/components/AppNav'
 import { DemoBlock } from '~/components/demos'
 
  const options = [
@@ -19,6 +20,7 @@ import { DemoBlock } from '~/components/demos'
 export default () => {
   return (
     <>
+      <AppNav title="组件 - 选择组" />
       <DemoBlock title='单选'>
         <Selector
           options={options}

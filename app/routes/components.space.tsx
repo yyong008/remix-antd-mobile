@@ -5,7 +5,7 @@ import { DemoBlock } from "~/components/demos";
 export default () => {
   return (
     <>
-      <AppNav title="组件 - 间隙" />
+      <AppNav title="组件 - 间距" />
       <DemoBlock title="水平方向的间距">
         <Space>
           <Button>按钮1</Button>

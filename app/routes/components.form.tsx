@@ -13,6 +13,7 @@ import {
 } from 'antd-mobile'
 import dayjs from 'dayjs'
 import type { DatePickerRef } from 'antd-mobile/es/components/date-picker'
+import AppNav from '~/components/AppNav'
 
 export default () => {
   const onFinish = (values: any) => {
@@ -23,6 +24,7 @@ export default () => {
 
   return (
     <>
+      <AppNav title="组件 - 表单" />
       <Form
         layout='horizontal'
         footer={

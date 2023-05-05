@@ -3,6 +3,7 @@ import { DemoBlock } from '~/components/demos'
 import { AntOutline, RightOutline } from 'antd-mobile-icons'
 
 import styles from '~/styles/demo1.module.css'
+import AppNav from '~/components/AppNav'
 
 export default () => {
   const onClick = () => {
@@ -18,6 +19,7 @@ export default () => {
   }
   return (
     <>
+      <AppNav title="组件 - 卡片" />
       <DemoBlock title='基础用法' background='gray'>
         <Card title='卡片标题' onClick={onClick}>
           卡片内容

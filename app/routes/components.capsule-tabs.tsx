@@ -1,9 +1,11 @@
 import { CapsuleTabs } from 'antd-mobile'
+import AppNav from '~/components/AppNav'
 import { DemoBlock } from '~/components/demos'
 
 export default () => {
   return (
     <>
+      <AppNav title="胶囊选项卡" />
       <DemoBlock title='基础用法' padding='0'>
         <CapsuleTabs>
           <CapsuleTabs.Tab title='水果' key='fruits'>

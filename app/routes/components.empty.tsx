@@ -1,10 +1,12 @@
 import { Empty } from 'antd-mobile'
 import { DemoBlock } from '~/components/demos'
 import { QuestionCircleOutline } from 'antd-mobile-icons'
+import AppNav from '~/components/AppNav'
 
 export default () => {
   return (
     <>
+      <AppNav title="组件 - 空" />
       <DemoBlock title='基础用法' padding='0'>
         <Empty />
       </DemoBlock>

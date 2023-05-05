@@ -3,12 +3,14 @@ import { Input } from 'antd-mobile'
 import { DemoBlock } from '~/components/demos'
 import styles from '~/styles/demo1.module.css'
 import { EyeInvisibleOutline, EyeOutline } from 'antd-mobile-icons'
+import AppNav from '~/components/AppNav'
 
 export default () => {
   const [value, setValue] = useState('')
   const [visible, setVisible] = useState(false)
   return (
     <>
+      <AppNav title="组件 - 输入框" />
       <DemoBlock title='基础用法'>
         <Input
           placeholder='请输入内容'

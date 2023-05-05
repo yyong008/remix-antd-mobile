@@ -1,28 +1,30 @@
-import { useState } from 'react'
-import { Button, ProgressBar, Space } from 'antd-mobile'
-import { DemoBlock } from '~/components/demos'
+import { useState } from "react";
+import { Button, ProgressBar, Space } from "antd-mobile";
+import { DemoBlock } from "~/components/demos";
+import AppNav from "~/components/AppNav";
 
 export default () => {
-  const [percent, setPercent] = useState<number>(20)
+  const [percent, setPercent] = useState<number>(20);
   return (
     <>
-      <DemoBlock title='基础用法'>
-        <Space direction='vertical' block>
+      <AppNav title="组件 - 进度条" />
+      <DemoBlock title="基础用法">
+        <Space direction="vertical" block>
           <Space block>
             <Button
-              color='primary'
+              color="primary"
               disabled={percent === 100}
               onClick={() => {
-                setPercent(pre => pre + 10)
+                setPercent((pre) => pre + 10);
               }}
             >
               进度+10
             </Button>
             <Button
-              color='primary'
-              fill='outline'
+              color="primary"
+              fill="outline"
               onClick={() => {
-                setPercent(0)
+                setPercent(0);
               }}
             >
               重置
@@ -32,35 +34,35 @@ export default () => {
         </Space>
       </DemoBlock>
 
-      <DemoBlock title='显示进度文字'>
-        <Space direction='vertical' block>
+      <DemoBlock title="显示进度文字">
+        <Space direction="vertical" block>
           <ProgressBar percent={50} text />
           <ProgressBar
             percent={50}
-            text='已完成 3/6 步'
+            text="已完成 3/6 步"
             style={{
-              '--text-width': '80px',
+              "--text-width": "80px",
             }}
           />
         </Space>
       </DemoBlock>
 
-      <DemoBlock title='指定线条宽度'>
-        <Space direction='vertical' block>
+      <DemoBlock title="指定线条宽度">
+        <Space direction="vertical" block>
           <ProgressBar
             percent={50}
             style={{
-              '--track-width': '4px',
+              "--track-width": "4px",
             }}
           />
           <ProgressBar
             percent={80}
             style={{
-              '--track-width': '12px',
+              "--track-width": "12px",
             }}
           />
         </Space>
       </DemoBlock>
     </>
-  )
-}
+  );
+};

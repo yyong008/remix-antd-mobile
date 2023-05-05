@@ -1,10 +1,11 @@
 import { DemoBlock, DemoDescription } from '~/components/demos'
-import React from 'react'
 import { Avatar, List, Space } from 'antd-mobile'
+import AppNav from '~/components/AppNav'
 
 export default () => {
   return (
     <>
+      <AppNav title="组件 - 头像" />
       <DemoBlock title='基础用法'>
         <Space block wrap>
           <Avatar src={demoAvatarImages[0]} />

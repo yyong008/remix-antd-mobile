@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { InfiniteScroll, List } from 'antd-mobile'
 import { sleep } from '~/components/demos'
+import AppNav from '~/components/AppNav'
 
 let count = 0
 
@@ -42,6 +43,7 @@ export default () => {
 
   return (
     <>
+      <AppNav title="组件 - 无限滚动" />
       <List>
         {data.map((item, index) => (
           <List.Item key={index}>{item}</List.Item>

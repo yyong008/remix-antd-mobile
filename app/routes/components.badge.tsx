@@ -1,4 +1,5 @@
 import { Badge, Space } from 'antd-mobile'
+import AppNav from '~/components/AppNav'
 import { DemoBlock } from '~/components/demos'
 
 import styles from '~/styles/demo1.module.css'
@@ -7,6 +8,7 @@ import styles from '~/styles/demo1.module.css'
 export default () => {
   return (
     <>
+      <AppNav title="组件 - 徽章" />
       <DemoBlock title='基础用法'>
         <Space style={{ '--gap': '24px' }}>
           <Badge content='5'>

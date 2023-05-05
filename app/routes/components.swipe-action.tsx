@@ -2,10 +2,12 @@ import { type FC, useRef } from 'react'
 import { Dialog, List, SwipeAction, Toast, Image } from 'antd-mobile'
 import { DemoBlock } from '~/components/demos'
 import type { Action, SwipeActionRef } from 'antd-mobile/es/components/swipe-action'
+import AppNav from '~/components/AppNav'
 
 export default () => {
   return (
     <>
+      <AppNav title="组件 - 滑动操作" />
       <DemoBlock title='搭配列表使用' padding='0'>
         <WithList />
       </DemoBlock>

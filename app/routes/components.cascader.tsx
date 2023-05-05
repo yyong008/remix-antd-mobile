@@ -3,6 +3,7 @@ import { Cascader, Button, Space, Toast } from 'antd-mobile'
 import { DemoBlock, DemoDescription } from '~/components/demos'
 
 import { options, longOptions } from '~/data/cascader'
+import AppNav from '~/components/AppNav'
 
 // 基础用法
 function BasicDemo() {
@@ -82,6 +83,7 @@ function ActionsDemo() {
 export default () => {
   return (
     <>
+      <AppNav title="组件 - 级联选择" />
       <DemoBlock title='基础用法'>
         <BasicDemo />
       </DemoBlock>

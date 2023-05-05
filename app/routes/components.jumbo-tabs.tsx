@@ -1,9 +1,11 @@
 import { JumboTabs } from 'antd-mobile'
+import AppNav from '~/components/AppNav'
 import { DemoBlock } from '~/components/demos'
 
 export default () => {
   return (
     <>
+      <AppNav title="组件 - 复杂选项卡" />
       <DemoBlock title='基础用法' padding='0'>
         <JumboTabs>
           <JumboTabs.Tab title='水果' description='描述文案' key='fruits'>

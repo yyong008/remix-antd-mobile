@@ -1,4 +1,5 @@
 import { Slider, Toast } from 'antd-mobile'
+import AppNav from '~/components/AppNav'
 import { DemoBlock } from '~/components/demos'
 
 const marks = {
@@ -24,6 +25,7 @@ export default () => {
 
   return (
     <>
+      <AppNav title="组件 - 滑动输入条" />
       <DemoBlock title='基础用法'>
         <Slider onAfterChange={toastValue} />
       </DemoBlock>

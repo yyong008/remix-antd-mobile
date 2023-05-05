@@ -1,15 +1,17 @@
-import { useState } from 'react'
-import { Checkbox, Space } from 'antd-mobile'
-import { DemoBlock } from '~/components/demos'
+import { useState } from "react";
+import { Checkbox, Space } from "antd-mobile";
+import { DemoBlock } from "~/components/demos";
+import AppNav from "~/components/AppNav";
 
 export default () => {
   return (
     <>
-      <DemoBlock title='基础用法'>
-        <Space direction='vertical'>
+      <AppNav title="组件 - 复选框" />
+      <DemoBlock title="基础用法">
+        <Space direction="vertical">
           <div
             onClick={() => {
-              console.log('点击了')
+              console.log("点击了");
             }}
           >
             <Checkbox />
@@ -18,37 +20,37 @@ export default () => {
         </Space>
       </DemoBlock>
 
-      <DemoBlock title='默认选中'>
+      <DemoBlock title="默认选中">
         <Checkbox defaultChecked>默认选中</Checkbox>
       </DemoBlock>
 
-      <DemoBlock title='占满整行宽度'>
-        <Space direction='vertical' block>
+      <DemoBlock title="占满整行宽度">
+        <Space direction="vertical" block>
           <Checkbox block>块级元素</Checkbox>
           <Checkbox>非块级元素</Checkbox>
         </Space>
       </DemoBlock>
 
-      <DemoBlock title='全选和半选'>
+      <DemoBlock title="全选和半选">
         <DemoIndeterminate />
       </DemoBlock>
     </>
-  )
-}
+  );
+};
 
 const DemoIndeterminate = () => {
-  const items = ['Apple', 'Orange', 'Banana']
-  const [value, setValue] = useState(['Apple'])
+  const items = ["Apple", "Orange", "Banana"];
+  const [value, setValue] = useState(["Apple"]);
   return (
-    <Space direction='vertical'>
+    <Space direction="vertical">
       <Checkbox
         indeterminate={value.length > 0 && value.length < items.length}
         checked={value.length === items.length}
-        onChange={checked => {
+        onChange={(checked) => {
           if (checked) {
-            setValue(items)
+            setValue(items);
           } else {
-            setValue([])
+            setValue([]);
           }
         }}
       >
@@ -56,12 +58,12 @@ const DemoIndeterminate = () => {
       </Checkbox>
       <Checkbox.Group
         value={value}
-        onChange={v => {
-          setValue(v as string[])
+        onChange={(v) => {
+          setValue(v as string[]);
         }}
       >
-        <Space direction='vertical'>
-          {items.map(item => (
+        <Space direction="vertical">
+          {items.map((item) => (
             <Checkbox key={item} value={item}>
               {item}
             </Checkbox>
@@ -69,5 +71,5 @@ const DemoIndeterminate = () => {
         </Space>
       </Checkbox.Group>
     </Space>
-  )
-}
+  );
+};

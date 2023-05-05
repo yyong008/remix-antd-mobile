@@ -1,9 +1,11 @@
 import { Tag, Space } from 'antd-mobile'
+import AppNav from '~/components/AppNav'
 import { DemoBlock } from '~/components/demos'
 
 export default () => {
   return (
     <>
+      <AppNav title="组件 - 标签" />
       <DemoBlock title='基础用法'>
         <Tag>123</Tag>
       </DemoBlock>

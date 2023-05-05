@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Popup, Space, Button } from 'antd-mobile'
 import { DemoBlock } from '~/components/demos'
+import AppNav from '~/components/AppNav'
 
 export default () => {
   const [visible1, setVisible1] = useState(false)
@@ -14,6 +15,7 @@ export default () => {
 
   return (
     <>
+      <AppNav title="组件 - 弹出层" />
       <DemoBlock title='弹出位置'>
         <Space direction='vertical'>
           <>

@@ -1,57 +1,59 @@
-import { useState } from 'react'
-import { Badge, TabBar } from 'antd-mobile'
-import { DemoBlock } from '~/components/demos'
+import { useState } from "react";
+import { Badge, TabBar } from "antd-mobile";
+import { DemoBlock } from "~/components/demos";
 import {
   AppOutline,
   MessageOutline,
   MessageFill,
   UnorderedListOutline,
   UserOutline,
-} from 'antd-mobile-icons'
+} from "antd-mobile-icons";
+import AppNav from "~/components/AppNav";
 
 export default () => {
   const tabs = [
     {
-      key: 'home',
-      title: '首页',
+      key: "home",
+      title: "首页",
       icon: <AppOutline />,
       badge: Badge.dot,
     },
     {
-      key: 'todo',
-      title: '待办',
+      key: "todo",
+      title: "待办",
       icon: <UnorderedListOutline />,
-      badge: '5',
+      badge: "5",
     },
     {
-      key: 'message',
-      title: '消息',
+      key: "message",
+      title: "消息",
       icon: (active: boolean) =>
         active ? <MessageFill /> : <MessageOutline />,
-      badge: '99+',
+      badge: "99+",
     },
     {
-      key: 'personalCenter',
-      title: '我的',
+      key: "personalCenter",
+      title: "我的",
       icon: <UserOutline />,
     },
-  ]
+  ];
 
-  const [activeKey, setActiveKey] = useState('todo')
+  const [activeKey, setActiveKey] = useState("todo");
 
   return (
     <>
-      <DemoBlock title='基础用法' padding='0'>
+      <AppNav title="组件 - 切换栏" />
+      <DemoBlock title="基础用法" padding="0">
         <TabBar>
-          {tabs.map(item => (
+          {tabs.map((item) => (
             <TabBar.Item key={item.key} icon={item.icon} title={item.title} />
           ))}
         </TabBar>
       </DemoBlock>
 
-      <DemoBlock title='徽标' padding='0'>
+      <DemoBlock title="徽标" padding="0">
         <TabBar>
-          {tabs.map(item => (
+          {tabs.map((item) => (
             <TabBar.Item
               key={item.key}
               icon={item.icon}
@@ -62,37 +64,37 @@ export default () => {
         </TabBar>
       </DemoBlock>
 
-      <DemoBlock title='仅图标' padding='0'>
+      <DemoBlock title="仅图标" padding="0">
         <TabBar>
-          {tabs.map(item => (
+          {tabs.map((item) => (
             <TabBar.Item key={item.key} icon={item.icon} />
           ))}
         </TabBar>
       </DemoBlock>
 
-      <DemoBlock title='仅标题' padding='0'>
+      <DemoBlock title="仅标题" padding="0">
         <TabBar>
-          {tabs.map(item => (
+          {tabs.map((item) => (
             <TabBar.Item key={item.key} title={item.title} />
           ))}
         </TabBar>
       </DemoBlock>
 
-      <DemoBlock title='受控组件' padding='0'>
+      <DemoBlock title="受控组件" padding="0">
         <TabBar activeKey={activeKey} onChange={setActiveKey}>
-          {tabs.map(item => (
+          {tabs.map((item) => (
             <TabBar.Item key={item.key} icon={item.icon} title={item.title} />
           ))}
         </TabBar>
       </DemoBlock>
 
-      <DemoBlock title='开启安全区' padding='0'>
+      <DemoBlock title="开启安全区" padding="0">
         <TabBar safeArea>
-          {tabs.map(item => (
+          {tabs.map((item) => (
             <TabBar.Item key={item.key} icon={item.icon} title={item.title} />
           ))}
         </TabBar>
       </DemoBlock>
     </>
-  )
-}
+  );
+};

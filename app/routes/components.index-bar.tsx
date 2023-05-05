@@ -1,4 +1,5 @@
 import { IndexBar, List } from 'antd-mobile'
+import AppNav from '~/components/AppNav'
 
 const getRandomList = (min: number, max: number): string[] => {
   return new Array(Math.floor(Math.random() * (max - min) + min)).fill('')
@@ -15,6 +16,7 @@ const groups = Array(26)
 export default () => {
   return (
     <div style={{ height: typeof window === 'undefined' ? '100vh' : window.innerHeight }}>
+      <AppNav title="组件 - 序列" />
       <IndexBar>
         {groups.map(group => {
           const { title, items } = group

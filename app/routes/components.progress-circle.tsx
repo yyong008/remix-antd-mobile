@@ -1,4 +1,5 @@
 import { ProgressCircle, Space } from 'antd-mobile'
+import AppNav from '~/components/AppNav'
 import { DemoBlock } from '~/components/demos'
 
 import styles from '~/styles/demo1.module.css'
@@ -6,6 +7,7 @@ import styles from '~/styles/demo1.module.css'
 export default () => {
   return (
     <>
+      <AppNav title="组件 - 环形进度条" />
       <DemoBlock title='基础用法'>
         <Space style={{ '--gap': '24px' }}>
           <ProgressCircle percent={80} />

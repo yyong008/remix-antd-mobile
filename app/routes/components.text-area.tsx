@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { TextArea } from 'antd-mobile'
 import { DemoBlock } from '~/components/demos'
+import AppNav from '~/components/AppNav'
 
 export default () => {
   const [value, setValue] = useState('')
   return (
     <>
+      <AppNav title="组件 - 文本域" />
       <DemoBlock title='基本的输入框组件'>
         <TextArea
           placeholder='请输入内容'

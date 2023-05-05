@@ -1,4 +1,5 @@
 import { Ellipsis, Space } from 'antd-mobile'
+import AppNav from '~/components/AppNav'
 import { DemoBlock } from '~/components/demos'
 
 const content =
@@ -7,6 +8,7 @@ const content =
 export default () => {
   return (
     <>
+      <AppNav title="组件 - 省略" />
       <DemoBlock title='尾部省略'>
         <Ellipsis direction='end' content={content} />
       </DemoBlock>

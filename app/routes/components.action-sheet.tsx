@@ -5,6 +5,7 @@ import type {
   Action,
   ActionSheetShowHandler,
 } from 'antd-mobile/es/components/action-sheet'
+import AppNav from '~/components/AppNav'
 
 const actions: Action[] = [
   { text: '复制', key: 'copy' },
@@ -144,6 +145,7 @@ function Imperative() {
 export default () => {
   return (
     <>
+      <AppNav title="组件 - 动作面板" />
       <DemoBlock title='基础用法'>
         <Space wrap>
           <Basic />

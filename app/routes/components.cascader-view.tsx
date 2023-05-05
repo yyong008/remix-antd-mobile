@@ -3,12 +3,14 @@ import { CascaderView } from 'antd-mobile'
 import { DemoBlock } from '~/components/demos'
 
 import { options, sameValueOptions } from '~/data/cascader-view'
+import AppNav from '~/components/AppNav'
 
 export default () => {
   const [value, setValue] = useState<string[]>([])
 
   return (
     <>
+      <AppNav title="组件 - 级联选择视图" />
       <DemoBlock title='基础用法' padding='0'>
         <CascaderView options={options} />
       </DemoBlock>

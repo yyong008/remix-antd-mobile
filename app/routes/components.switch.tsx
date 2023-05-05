@@ -1,10 +1,12 @@
 import { Space, Switch } from 'antd-mobile'
 import { DemoBlock } from '~/components/demos'
 import { CloseOutline, CheckOutline } from 'antd-mobile-icons'
+import AppNav from '~/components/AppNav'
 
 export default () => {
   return (
     <>
+      <AppNav title="组件 - 开关" />
       <DemoBlock title='基础用法'>
         <Switch />
       </DemoBlock>

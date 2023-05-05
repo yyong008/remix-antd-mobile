@@ -4,6 +4,7 @@ import { DemoBlock, DemoDescription } from '~/components/demos'
 import type { SwiperRef } from 'antd-mobile/es/components/swiper'
 
 import styles from '~/styles/demo1.module.css'
+import AppNav from '~/components/AppNav'
 
 const colors = ['#ace0ff', '#bcffbd', '#e4fabd', '#ffcfac']
 
@@ -25,6 +26,7 @@ export default () => {
   const ref = useRef<SwiperRef>(null)
   return (
     <>
+      <AppNav title="组件 - 走马灯" />
       <DemoBlock title='基础用法'>
         <Swiper>{items}</Swiper>
       </DemoBlock>

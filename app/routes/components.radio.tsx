@@ -1,10 +1,12 @@
 import { Radio, Space } from 'antd-mobile'
+import AppNav from '~/components/AppNav'
 import { DemoBlock, DemoDescription } from '~/components/demos'
 import styles from '~/styles/demo1.module.css'
 
 export default () => {
   return (
     <>
+      <AppNav title="组件 - 单选框" />
       <DemoBlock title='基础用法'>
         <Space direction='vertical'>
           <Radio />

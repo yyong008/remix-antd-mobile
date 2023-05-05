@@ -3,12 +3,14 @@ import { Button, Space, Toast } from 'antd-mobile'
 import { DemoBlock } from '~/components/demos'
 import { UploadOutline } from 'antd-mobile-icons'
 import type { ToastHandler } from 'antd-mobile/es/components/toast'
+import AppNav from '~/components/AppNav'
 
 export default () => {
   const handler = useRef<ToastHandler>()
 
   return (
     <>
+      <AppNav title="组件 - 轻提示" />
       <DemoBlock title='基础用法'>
         <Button
           onClick={() =>

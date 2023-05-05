@@ -1,10 +1,12 @@
 import { Rate, Space, Toast } from 'antd-mobile'
 import { DemoBlock } from '~/components/demos'
 import { SmileOutline } from 'antd-mobile-icons'
+import AppNav from '~/components/AppNav'
 
 export default () => {
   return (
     <>
+      <AppNav title="组件 - 评分" />
       <DemoBlock title='基础用法'>
         <Rate onChange={val => Toast.show(val.toString())} />
       </DemoBlock>

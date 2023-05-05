@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { PickerView } from 'antd-mobile'
 import { DemoBlock } from '~/components/demos'
+import AppNav from '~/components/AppNav'
 
 const basicColumns = [
   [
@@ -21,6 +22,7 @@ export default () => {
 
   return (
     <>
+      <AppNav title="组件 - 选择器视图" />
       <DemoBlock title='基础用法' padding='0'>
         <PickerView columns={basicColumns} />
       </DemoBlock>

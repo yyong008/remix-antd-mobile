@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Popover, Button } from 'antd-mobile'
 import { DemoBlock } from '~/components/demos'
+import AppNav from '~/components/AppNav'
 
 export default () => {
   const [placement, setPlacement] =
@@ -25,6 +26,7 @@ export default () => {
 
   return (
     <>
+      <AppNav title="组件 - 气泡弹出框" />
       <DemoBlock title='基础用法'>
         <Popover
           content='Hello World'

@@ -4,10 +4,12 @@ import {
   PayCircleOutline,
   SetOutline,
 } from 'antd-mobile-icons'
+import AppNav from '~/components/AppNav'
 
 export default () => {
   return (
     <>
+      <AppNav title="组件 - 列表" />  
       <List header='基础用法'>
         <List.Item>1</List.Item>
         <List.Item>2</List.Item>

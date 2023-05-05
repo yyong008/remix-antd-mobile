@@ -1,4 +1,5 @@
 import { SideBar, Badge  } from 'antd-mobile'
+import AppNav from '~/components/AppNav'
 import { DemoBlock } from '~/components/demos'
 
 const tabs = [
@@ -23,6 +24,7 @@ const tabs = [
 export default () => {
   return (
     <>
+      <AppNav title="组件 - 侧边导航" />
       <DemoBlock title='基础用法' padding='0'>
         <SideBar>
           {tabs.map(item => (
